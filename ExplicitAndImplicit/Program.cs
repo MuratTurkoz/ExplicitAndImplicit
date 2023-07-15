@@ -61,14 +61,14 @@ namespace ExplicitAndImplicit
                 Id = 1111,
             };
 
-            /*dog = bird;*/  //Doğrudan atama yapılamaz Referans tiplerde atama olmaz.Ancak bu durumlarda örtük(Implicit) ya da açıktan(Explicit) atama yapılabilir.
+            /*dog = bird;*/  //Doğrudan atama yapılamaz Referans tiplerde atama olmaz.Ancak bu durumlarda örtük(Implicit) ya da açıktan(Explicit) ile yapılabilir.
+            bird = dog;//Artık köpeğimiz kuş oldu:D
+            dog = (Dog)bird2;//Artık kuşumuz köpek oldu:D
             Console.WriteLine("Örnek 3 => Tamsayı içine ondalıklı sayı atama");
             //Hadi Implicit Operator kullanalım=>Lütfen Bird sınıfının içene bakın..
-            bird = dog;//Artık köpeğimiz kuş oldu:D
             Console.WriteLine("Artık Köpeğimiz Bir kuş oldu:>Implicit Atama (Örtük)");
             Console.WriteLine($"Kuş Özellikleri: Id:{bird.Id},Name:{bird.Name},Genus:{bird.Genus},");
             //Hadi Explicit Operator kullanalım=>Lütfen Dog sınıfının içene bakın..
-            dog = (Dog)bird2;//Artık kuşumuz köpek oldu:D
             Console.WriteLine("Artık Kuşumuz Bir Köpek oldu:>Explicit Atama (Açık)");
             Console.WriteLine($"Köpek Özellikleri: Id:{dog.Id},Name:{dog.Name},Genus:{dog.Genus},");
         
