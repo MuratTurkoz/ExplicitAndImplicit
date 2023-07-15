@@ -10,7 +10,7 @@ namespace ExplicitAndImplicit
     {
         public static implicit operator Bird(Dog b)
         {
-            Bird bird = new Dog();
+            Bird bird = new Bird();
             bird.Name = b.Name;
             bird.Id = b.Id;
             bird.Genus = b.Genus;
